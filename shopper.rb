@@ -8,12 +8,12 @@ def parse_gilt_results(x)
 
   x["products"].each do |product|
     gilt_results[product]["name"] = {
-    "brand" => product["brand"],
-    "descriptions" => product["content"]["description"],
-    "sale_price" => product["skus"][0]["sale_price"],
-    "size" => product["skus"][0]["attributes"][0]["value"],
-    "image" => product["image_urls"]["1080x1440"][0]["url"]
-    }
+      "brand" => product["brand"],
+      "descriptions" => product["content"]["description"],
+      "sale_price" => product["skus"][0]["sale_price"],
+      "size" => product["skus"][0]["attributes"][0]["value"],
+      "image" => product["image_urls"]["1080x1440"][0]["url"]
+      }
   end
   gilt_results
 end
