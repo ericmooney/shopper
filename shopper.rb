@@ -7,7 +7,7 @@ def parse_gilt_results(x)
   gilt_results = {}
 
   x["products"].each do |product|
-    gilt_results[product]["name"] = {
+    gilt_results[product["name"]] = {
       "brand" => product["brand"],
       "descriptions" => product["content"]["description"],
       "sale_price" => product["skus"][0]["sale_price"],
